@@ -1,0 +1,47 @@
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+out/
+
+.env
+gocd/server/ssh/**
+!gocd/server/ssh/put-ssh-keys-here
+.vagrant/
+ubuntu-xenial-16.04-cloudimg-console.log
+
+# https://github.com/github/gitignore/blob/e5323759e387ba347a9d50f8b0ddd16502eb71d4/Global/VisualStudioCode.gitignore
+.vscode/*
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
+# !.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
