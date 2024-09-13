@@ -1,0 +1,40 @@
+main process cfa {
+	var new : int
+	var tmp_0 : int
+	var old : int
+	var lock : int
+
+	loc L6
+	init loc L0
+	loc L9
+	final loc L1
+	error loc L2
+	loc L8
+
+	L9 -> L8 {
+		assume not (tmp_0 /= 0)
+	}
+	L8 -> L6 {
+		assume new /= old
+	}
+	L8 -> L1 {
+		assume not (new /= old)
+	}
+	L9 -> L8 {
+		assume tmp_0 /= 0
+		lock := 0
+		new := new + 1
+	}
+	L0 -> L6 {
+		lock := 0
+	}
+	L6 -> L2 {
+		assume not (lock = 0)
+	}
+	L6 -> L9 {
+		assume lock = 0
+		lock := 1
+		old := new
+		havoc tmp_0
+	}
+}
