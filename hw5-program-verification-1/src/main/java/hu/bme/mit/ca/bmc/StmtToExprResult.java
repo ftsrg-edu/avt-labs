@@ -8,12 +8,8 @@ public final class StmtToExprResult {
     final Expr<BoolType> expr;
     final VarIndexing indexing;
 
-    private StmtToExprResult(Expr<BoolType> expr, VarIndexing indexing) {
+    StmtToExprResult(Expr<BoolType> expr, VarIndexing indexing) {
         this.expr = expr;
         this.indexing = indexing;
-    }
-
-    public static StmtToExprResult of(Expr<BoolType> expr, VarIndexing indexing) {
-        return new StmtToExprResult(expr, indexing);
     }
 }
